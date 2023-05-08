@@ -1,10 +1,13 @@
 <?php
-$todos = [];
+$todos = [
+    'Dormire',
+    'Fare la spesa',
+];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $new_todo = $_POST['todo'];
   if ($new_todo) {
-    array_unshift($todos, $new_todo); // aggiungi il nuovo todo all'inizio dell'array
+    array_push($todos, $new_todo); // aggiungi il nuovo todo all'inizio dell'array
   }
 }
 
